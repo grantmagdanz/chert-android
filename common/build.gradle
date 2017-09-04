@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+targetCompatibility = 1.7
+sourceCompatibility = 1.7
+
+sourceSets {
+    main {
+        java.srcDirs 'src/'
+    }
+}
+
+dependencies {
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+}
