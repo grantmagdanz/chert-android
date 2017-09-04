@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java.srcDir 'src/'
+        resources.srcDir 'res/'
+    }
+}
+
+jar {
+    manifest.attributes 'Main-Class' : 'com.android.inputmethod.keyboard.tools.MakeKeyboardText'
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+def outDir = project.rootDir.toString() + '/java'
+
+task makeKeyboardText(type: JavaExec, dependsOn: jar) {
+    main '-jar'
+    args jar.archivePath, '-java', outDir
+}

@@ -39,6 +39,8 @@ android {
     }
 }
 
+preBuild.dependsOn ':tools:make-keyboard-text:makeKeyboardText'
+
 dependencies {
     compile project(':common')
 
