@@ -378,7 +378,7 @@ public final class SetupWizardActivity extends Activity implements View.OnClickL
 
     void hideWelcomeVideoAndShowWelcomeImage() {
         mWelcomeVideoView.setVisibility(View.GONE);
-        mWelcomeImageView.setImageResource(R.raw.setup_welcome_image);
+        mWelcomeImageView.setImageResource(+ R.raw.setup_welcome_image);
         mWelcomeImageView.setVisibility(View.VISIBLE);
     }
 
