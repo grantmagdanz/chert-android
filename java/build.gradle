@@ -34,6 +34,7 @@ android {
             manifest.srcFile 'AndroidManifest.xml'
             java.srcDirs 'src/', '../java-overridable/src'
             res.srcDirs 'res/'
+            jniLibs.srcDir 'jniLibs/'
         }
     }
 }
