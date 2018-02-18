@@ -18,6 +18,27 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Chert Keyboard Names -->
+    <string name="subtype_ahtna">Ahtna</string>
+    <string name="subtype_degxinag">Deg Xinag</string>
+    <string name="subtype_denaina">Dena\'ina</string>
+    <string name="subtype_eyak">Eyak</string>
+    <string name="subtype_gwichin">Dinjii Zhuh K\'yaa</string>
+    <string name="subtype_haida">X̱aad Kíl</string>
+    <string name="subtype_han">Hän</string>
+    <string name="subtype_holikachuk">Holikachuk</string>
+    <string name="subtype_inupiaq">Iñupiatun</string>
+    <string name="subtype_koyukon">Denaakk\'e</string>
+    <string name="subtype_kusko_upper">Denak\'i</string>
+    <string name="subtype_smalgyax_tshimshian">Sm\'algya̱x</string>
+    <string name="subtype_sugtstun_sugpiaq_alutiiq">Sugt\'stun</string>
+    <string name="subtype_tanacross">Dihthâad Xt\'een iin aanděg\'</string>
+    <string name="subtype_tanana_lower">Behnti Kenaga\'</string>
+    <string name="subtype_tanana_upper">Née\'aaneegn\'</string>
+    <string name="subtype_tlingit">Lingít</string>
+    <string name="subtype_unangan">Unangam Tunuu</string>
+    <string name="subtype_yugtun">Yugtun</string>
+
     <!-- Title for Latin keyboard input options dialog [CHAR LIMIT=25] -->
     <string name="english_ime_input_options">Input options</string>
 

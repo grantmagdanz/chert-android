@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="morekeys_a">ä,ą,ą̈</string>
+    <string name="morekeys_e">ę</string>
+    <string name="morekeys_d">ḏ</string>
+    <string name="morekeys_i">į</string>
+    <string name="morekeys_l">ł,ł̱</string>
+    <string name="morekeys_o">ǫ</string>
+    <string name="morekeys_s">s̱</string>
+    <string name="morekeys_u">ü,ų,ų̈,u̱</string>
+    <string name="morekeys_t">ṯ</string>
+    <string name="morekeys_x">x̱</string>
+    <string name="morekeys_punctuation">&#x0300;,&#x030C;</string>
+</resources>

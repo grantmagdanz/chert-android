@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="morekeys_g">g̱</string>
+    <string name="morekeys_k">ḵ</string>
+    <string name="morekeys_l">ł</string>
+    <string name="morekeys_o">∅</string>
+    <string name="morekeys_y">ÿ,y̱</string>
+    <string name="morekeys_x">x̱</string>
+    <string name="morekeys_punctuation">&#x0301;,&#x0300;,&#x0302;</string>
+</resources>
