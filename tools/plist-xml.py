@@ -16,12 +16,11 @@ UNIX_FOLDER_SEPERATOR = '/'
 PUNCTUATION_PLACE_HOLDER = '___'
 
 def get_output_folder_name(filename):
-    # Drop '.plist', make it lower case, and for files that have parenthesis
-    # such as Tanana(Lower), convert the first paren to an underscore and remove
-    # the second. Tanana(Lower).plist would become tanana_lowwer.
-    #
-    # Finally remove spaces just in case.
-    filename = filename[:-6].lower().replace('(', '_').replace(')', '').replace(' ', '').replace('\'', '')
+    # Drop '.plist', make it lower case, and remove parenthesis, spaces, and apostrophes.
+    filename = filename[:-6].lower().replace('(', '').replace(')', '').replace(' ', '').replace('\'', '')
+
+    # Android's Locale limits locale names to 8 characters, so only keep 8.
+    filename = filename[:8]
 
     # The Android localization folder name is of the structure 'values-<locale>'
     return 'values-' + filename
@@ -84,7 +83,7 @@ def get_unicode_for_accent(accent):
                   'CIRCUMFLEX': '&#x0302;',
                   'CARON': '&#x030C;',
                   'DOUBLE_ACUTE': '&#x030B;',
-                  'COMBINING_DOUBLE_INVERTED_BREVE': '&#x0361'}
+                  'COMBINING_DOUBLE_INVERTED_BREVE': '&#x0361;'}
 
     return accent_map[accent.upper()]
 
