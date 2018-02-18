@@ -190,7 +190,7 @@ public class MoreKeysResources {
             final String localeStr = LocaleUtils.getLocaleCode(locale);
             final String localeToDump = (locale == LocaleUtils.DEFAULT_LOCALE)
                     ? String.format("\"%s\"", localeStr)
-                    : String.format("\"%s\"%s", localeStr, "       ".substring(localeStr.length()));
+                    : String.format("\"%s\"%s", localeStr, "        ".substring(localeStr.length()));
             out.format("        %s, %-12s /* %3d/%3d %s */\n",
                     localeToDump, getArrayNameForLocale(locale) + ",",
                     resMap.getResources().size(), resMap.getOutputArraySize(),
