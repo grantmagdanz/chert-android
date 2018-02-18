@@ -79,7 +79,6 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
             "pref_show_language_switch_key";
     public static final String PREF_INCLUDE_OTHER_IMES_IN_LANGUAGE_SWITCH_LIST =
             "pref_include_other_imes_in_language_switch_list";
-    public static final String PREF_CUSTOM_INPUT_STYLES = "custom_input_styles";
     public static final String PREF_ENABLE_SPLIT_KEYBOARD = "pref_split_keyboard";
     // TODO: consolidate key preview dismiss delay with the key preview animation parameters.
     public static final String PREF_KEY_PREVIEW_POPUP_DISMISS_DELAY =
@@ -270,18 +269,6 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
             editor.apply();
         }
         return prefs.getBoolean(PREF_SHOW_LANGUAGE_SWITCH_KEY, true);
-    }
-
-    public static String readPrefAdditionalSubtypes(final SharedPreferences prefs,
-            final Resources res) {
-        final String predefinedPrefSubtypes = AdditionalSubtypeUtils.createPrefSubtypes(
-                res.getStringArray(R.array.predefined_subtypes));
-        return prefs.getString(PREF_CUSTOM_INPUT_STYLES, predefinedPrefSubtypes);
-    }
-
-    public static void writePrefAdditionalSubtypes(final SharedPreferences prefs,
-            final String prefSubtypes) {
-        prefs.edit().putString(PREF_CUSTOM_INPUT_STYLES, prefSubtypes).apply();
     }
 
     public static float readKeypressSoundVolume(final SharedPreferences prefs,

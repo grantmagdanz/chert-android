@@ -73,9 +73,6 @@ public final class SystemBroadcastReceiver extends BroadcastReceiver {
             // Need to restore additional subtypes because system always clears additional
             // subtypes when the package is replaced.
             RichInputMethodManager.init(context);
-            final RichInputMethodManager richImm = RichInputMethodManager.getInstance();
-            final InputMethodSubtype[] additionalSubtypes = richImm.getAdditionalSubtypes();
-            richImm.setAdditionalInputMethodSubtypes(additionalSubtypes);
             toggleAppIcon(context);
 
             // Remove all the previously scheduled downloads. This will also makes sure

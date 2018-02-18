@@ -99,22 +99,10 @@ public class RichInputMethodManager {
         mContext = context;
         mInputMethodInfoCache = new InputMethodInfoCache(
                 mImmWrapper.mImm, context.getPackageName());
-
-        // Initialize additional subtypes.
         SubtypeLocaleUtils.init(context);
-        final InputMethodSubtype[] additionalSubtypes = getAdditionalSubtypes();
-        mImmWrapper.mImm.setAdditionalInputMethodSubtypes(
-                getInputMethodIdOfThisIme(), additionalSubtypes);
 
         // Initialize the current input method subtype and the shortcut IME.
         refreshSubtypeCaches();
-    }
-
-    public InputMethodSubtype[] getAdditionalSubtypes() {
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        final String prefAdditionalSubtypes = Settings.readPrefAdditionalSubtypes(
-                prefs, mContext.getResources());
-        return AdditionalSubtypeUtils.createAdditionalSubtypesArray(prefAdditionalSubtypes);
     }
 
     public InputMethodManager getInputMethodManager() {

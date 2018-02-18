@@ -43,20 +43,6 @@ public final class ThemeSettingsFragment extends SubScreenFragment
         }
     }
 
-    static void updateKeyboardThemeSummary(final Preference pref) {
-        final Context context = pref.getContext();
-        final Resources res = context.getResources();
-        final KeyboardTheme keyboardTheme = KeyboardTheme.getKeyboardTheme(context);
-        final String[] keyboardThemeNames = res.getStringArray(R.array.keyboard_theme_names);
-        final int[] keyboardThemeIds = res.getIntArray(R.array.keyboard_theme_ids);
-        for (int index = 0; index < keyboardThemeNames.length; index++) {
-            if (keyboardTheme.mThemeId == keyboardThemeIds[index]) {
-                pref.setSummary(keyboardThemeNames[index]);
-                return;
-            }
-        }
-    }
-
     @Override
     public void onCreate(final Bundle icicle) {
         super.onCreate(icicle);

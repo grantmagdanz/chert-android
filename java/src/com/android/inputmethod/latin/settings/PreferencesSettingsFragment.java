@@ -26,6 +26,8 @@ import android.preference.Preference;
 import com.android.inputmethod.latin.AudioAndHapticFeedbackManager;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.RichInputMethodManager;
+import com.android.inputmethod.latin.common.Constants;
+import com.android.inputmethod.latin.define.ProductionFlags;
 
 /**
  * "Preferences" settings sub screen.
@@ -47,6 +49,11 @@ public final class PreferencesSettingsFragment extends SubScreenFragment {
     public void onCreate(final Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.prefs_screen_preferences);
+
+        if (!ProductionFlags.IS_SPLIT_KEYBOARD_SUPPORTED ||
+                Constants.isPhone(Settings.readScreenMetrics(getResources()))) {
+            removePreference(Settings.PREF_ENABLE_SPLIT_KEYBOARD);
+        }
 
         final Resources res = getResources();
         final Context context = getActivity();

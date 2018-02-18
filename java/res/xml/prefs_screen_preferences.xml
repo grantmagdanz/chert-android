@@ -50,4 +50,9 @@
         android:title="@string/voice_input"
         android:defaultValue="true"
         android:persistent="true" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_split_keyboard"
+        android:persistent="true"
+        android:title="@string/enable_split_keyboard" />
 </PreferenceScreen>
