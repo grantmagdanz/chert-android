@@ -18,6 +18,7 @@ package com.android.inputmethod.latin;
 
 import static com.android.inputmethod.latin.common.Constants.Subtype.KEYBOARD_MODE;
 
+import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 import android.view.inputmethod.InputMethodSubtype;
@@ -87,39 +88,16 @@ public class RichInputMethodSubtype {
         return toString();
     }
 
-    // InputMethodSubtype's display name for spacebar text in its locale.
-    //        isAdditionalSubtype (T=true, F=false)
-    // locale layout  |  Middle      Full
-    // ------ ------- - --------- ----------------------
-    //  en_US qwerty  F  English   English (US)           exception
-    //  en_GB qwerty  F  English   English (UK)           exception
-    //  es_US spanish F  Español   Español (EE.UU.)       exception
-    //  fr    azerty  F  Français  Français
-    //  fr_CA qwerty  F  Français  Français (Canada)
-    //  fr_CH swiss   F  Français  Français (Suisse)
-    //  de    qwertz  F  Deutsch   Deutsch
-    //  de_CH swiss   T  Deutsch   Deutsch (Schweiz)
-    //  zz    qwerty  F  QWERTY    QWERTY
-    //  fr    qwertz  T  Français  Français
-    //  de    qwerty  T  Deutsch   Deutsch
-    //  en_US azerty  T  English   English (US)
-    //  zz    azerty  T  AZERTY    AZERTY
-    // Get the RichInputMethodSubtype's full display name in its locale.
+    /*
+     * Get the RichInputMethodSubtype's display name. It comes from the string specified in
+     * method.xml for 'label'
+     */
     @Nonnull
-    public String getFullDisplayName() {
+    public String getDisplayName(Context context) {
         if (isNoLanguage()) {
             return SubtypeLocaleUtils.getKeyboardLayoutSetDisplayName(mSubtype);
         }
-        return SubtypeLocaleUtils.getSubtypeLocaleDisplayName(mSubtype.getLocale());
-    }
-
-    // Get the RichInputMethodSubtype's middle display name in its locale.
-    @Nonnull
-    public String getMiddleDisplayName() {
-        if (isNoLanguage()) {
-            return SubtypeLocaleUtils.getKeyboardLayoutSetDisplayName(mSubtype);
-        }
-        return SubtypeLocaleUtils.getSubtypeLanguageDisplayName(mSubtype.getLocale());
+        return mSubtype.getDisplayName(context, context.getPackageName(), context.getApplicationInfo()).toString();
     }
 
     @Override
