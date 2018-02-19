@@ -200,7 +200,7 @@
         />
     <subtype android:icon="@drawable/ic_ime_switcher_dark"
         android:label="@string/subtype_unangan"
-        android:subtypeId="0x70b0f974"
+        android:subtypeId="0x70b0f972"
         android:imeSubtypeLocale="unangan"
         android:imeSubtypeMode="keyboard"
         android:imeSubtypeExtraValue="KeyboardLayoutSet=qwerty,AsciiCapable,EmojiCapable"
