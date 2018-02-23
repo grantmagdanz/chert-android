@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.0'
 
     defaultConfig {
-        applicationId "com.android.inputmethod.latin"
+        applicationId "com.chert.inputmethod.latin"
         minSdkVersion 14
         targetSdkVersion 23
         compileOptions {
@@ -13,7 +13,7 @@ android {
             targetCompatibility JavaVersion.VERSION_1_7
         }
 
-        testApplicationId "com.android.inputmethod.latin.tests"
+        testApplicationId "com.chert.inputmethod.latin.tests"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 

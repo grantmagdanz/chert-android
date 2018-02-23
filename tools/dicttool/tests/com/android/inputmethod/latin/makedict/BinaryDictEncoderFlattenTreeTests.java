@@ -16,8 +16,8 @@
 
 package com.android.inputmethod.latin.makedict;
 
-import com.android.inputmethod.latin.makedict.FormatSpec.DictionaryOptions;
-import com.android.inputmethod.latin.makedict.FusionDictionary.PtNodeArray;
+import com.chert.inputmethod.latin.makedict.FormatSpec.DictionaryOptions;
+import com.chert.inputmethod.latin.makedict.FusionDictionary.PtNodeArray;
 
 import junit.framework.TestCase;
 

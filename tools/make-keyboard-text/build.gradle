@@ -8,7 +8,7 @@ sourceSets {
 }
 
 jar {
-    manifest.attributes 'Main-Class' : 'com.android.inputmethod.keyboard.tools.MakeKeyboardText'
+    manifest.attributes 'Main-Class' : 'com.chert.inputmethod.keyboard.tools.MakeKeyboardText'
     from {
         (configurations.runtime).collect {
             it.isDirectory() ? it : zipTree(it)

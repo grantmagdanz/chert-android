@@ -16,7 +16,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         coreApp="true"
-        package="com.android.inputmethod.latin">
+        package="com.chert.inputmethod.latin">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
 
@@ -43,7 +43,7 @@
             android:directBootAware="true">
 
         <!-- Services -->
-        <service android:name="LatinIME"
+        <service android:name="com.chert.inputmethod.latin.LatinIME"
                 android:label="@string/english_ime_name"
                 android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
@@ -52,7 +52,7 @@
             <meta-data android:name="android.view.im" android:resource="@xml/method" />
         </service>
 
-        <service android:name=".spellcheck.AndroidSpellCheckerService"
+        <service android:name="com.chert.inputmethod.latin.spellcheck.AndroidSpellCheckerService"
                  android:label="@string/spell_checker_service_name"
                  android:permission="android.permission.BIND_TEXT_SERVICE">
             <intent-filter>
@@ -62,12 +62,12 @@
                     android:resource="@xml/spellchecker" />
         </service>
 
-        <service android:name="com.android.inputmethod.dictionarypack.DictionaryService"
+        <service android:name="com.chert.inputmethod.dictionarypack.DictionaryService"
                 android:label="@string/dictionary_service_name">
         </service>
 
         <!-- Activities -->
-        <activity android:name=".setup.SetupActivity"
+        <activity android:name="com.chert.inputmethod.latin.setup.SetupActivity"
                 android:theme="@style/platformActivityTheme"
                 android:label="@string/english_ime_name"
                 android:icon="@drawable/ic_launcher_keyboard"
@@ -80,13 +80,13 @@
         </activity>
 
         <activity
-            android:name=".permissions.PermissionsActivity"
+            android:name="com.chert.inputmethod.latin.permissions.PermissionsActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:exported="false"
             android:taskAffinity="" >
         </activity>
 
-        <activity android:name=".setup.SetupWizardActivity"
+        <activity android:name="com.chert.inputmethod.latin.setup.SetupWizardActivity"
                 android:theme="@style/platformActivityTheme"
                 android:label="@string/english_ime_name"
                 android:clearTaskOnLaunch="true">
@@ -95,7 +95,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".settings.SettingsActivity"
+        <activity android:name="com.chert.inputmethod.latin.settings.SettingsActivity"
                 android:theme="@style/platformSettingsTheme"
                 android:label="@string/english_ime_settings">
             <intent-filter>
@@ -103,7 +103,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".spellcheck.SpellCheckerSettingsActivity"
+        <activity android:name="com.chert.inputmethod.latin.spellcheck.SpellCheckerSettingsActivity"
                   android:theme="@style/platformSettingsTheme"
                   android:label="@string/android_spell_checker_settings">
             <intent-filter>
@@ -111,7 +111,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.inputmethod.dictionarypack.DictionarySettingsActivity"
+        <activity android:name="com.chert.inputmethod.dictionarypack.DictionarySettingsActivity"
                 android:theme="@style/platformSettingsTheme"
                 android:label="@string/dictionary_settings_title"
                 android:uiOptions="splitActionBarWhenNarrow">
@@ -120,7 +120,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.inputmethod.dictionarypack.DownloadOverMeteredDialog"
+        <activity android:name="com.chert.inputmethod.dictionarypack.DownloadOverMeteredDialog"
                 android:theme="@style/platformActivityTheme"
                 android:label="@string/dictionary_install_over_metered_network_prompt">
             <intent-filter>
@@ -129,11 +129,11 @@
         </activity>
 
         <!-- Unexported activity used for tests. -->
-        <activity android:name=".settings.TestFragmentActivity"
+        <activity android:name="com.chert.inputmethod.latin.settings.TestFragmentActivity"
                 android:exported="false" />
 
         <!-- Broadcast receivers -->
-        <receiver android:name="SystemBroadcastReceiver">
+        <receiver android:name="com.chert.inputmethod.latin.SystemBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -142,13 +142,13 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="DictionaryPackInstallBroadcastReceiver" android:exported="false">
+        <receiver android:name="com.chert.inputmethod.latin.DictionaryPackInstallBroadcastReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="com.android.inputmethod.dictionarypack.aosp.UNKNOWN_CLIENT" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.inputmethod.dictionarypack.EventHandler">
+        <receiver android:name="com.chert.inputmethod.dictionarypack.EventHandler">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
@@ -158,14 +158,14 @@
         </receiver>
 
         <!-- Broadcast receiver for AccountManager#LOGIN_ACCOUNTS_CHANGED_ACTION. -->
-        <receiver android:name=".accounts.AccountsChangedReceiver">
+        <receiver android:name="com.chert.inputmethod.latin.accounts.AccountsChangedReceiver">
             <intent-filter>
                 <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED" />
             </intent-filter>
         </receiver>
 
         <!-- Content providers -->
-        <provider android:name="com.android.inputmethod.dictionarypack.DictionaryProvider"
+        <provider android:name="com.chert.inputmethod.dictionarypack.DictionaryProvider"
                 android:grantUriPermissions="true"
                 android:exported="false"
                 android:authorities="@string/authority"
