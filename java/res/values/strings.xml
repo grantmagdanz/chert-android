@@ -417,7 +417,7 @@ mobile devices. [CHAR LIMIT=25] -->
     <!-- Title of the setup wizard welcome screen. [CHAR LIMT=40] -->
     <string name="setup_welcome_title">"Welcome to <xliff:g id="APPLICATION_NAME" example="Android Keyboard">%s</xliff:g>"</string>
     <!-- Additional title of the setup wizard welcome screen, just below the setup_welcome_title. [CHAR_LIMIT=64] -->
-    <string name="setup_welcome_additional_description">with Gesture Typing</string>
+    <string name="setup_welcome_additional_description">Alaska\'s Native Languages Keyboard</string>
     <!-- The label of the button that starts the setup wizard. [CHAR_LIMIT=64] -->
     <string name="setup_start_action">Get started</string>
     <!-- The label of the button that navigates the user to the next step of the setup wizard. [CHAR_LIMIT=64] -->
@@ -449,7 +449,7 @@ mobile devices. [CHAR LIMIT=25] -->
     <!-- Detailed instruction of the 3rd step in the setup wizard. [CHAR LIMIT=120] -->
     <string name="setup_step3_instruction">Now you can type in all your favorite apps with <xliff:g id="APPLICATION_NAME" example="Android Keyboard">%s</xliff:g>.</string>
     <!-- The label of the button that triggers the screen for configuaring additional languages of the keyboard. [CHAR_LIMIT=64] -->
-    <string name="setup_step3_action">Configure additional languages</string>
+    <string name="setup_step3_action">Configure Alaska Native languages</string>
     <!-- The label of the button that finishes the setup wizard. [CHAR_LIMIT=64] -->
     <string name="setup_finish_action">Finished</string>
     <!-- Option to show setup wizard icon. [CHAR LIMIT=30]-->
