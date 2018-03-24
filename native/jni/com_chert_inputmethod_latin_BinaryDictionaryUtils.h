@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 The Android Open Source Project
+ * Copyright (C) 2014 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-#ifndef _COM_ANDROID_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H
-#define _COM_ANDROID_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H
+#ifndef _COM_CHERT_INPUTMETHOD_LATIN_BINARYDICTIONARYUTILS_H
+#define _COM_CHERT_INPUTMETHOD_LATIN_BINARYDICTIONARYUTILS_H
 
 #include "jni.h"
 
 namespace latinime {
-int register_ProximityInfo(JNIEnv *env);
+int register_BinaryDictionaryUtils(JNIEnv *env);
 } // namespace latinime
-#endif // _COM_ANDROID_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H
+#endif // _COM_CHERT_INPUTMETHOD_LATIN_BINARYDICTIONARYUTILS_H

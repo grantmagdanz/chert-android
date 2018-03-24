@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-#ifndef _COM_ANDROID_INPUTMETHOD_LATIN_BINARYDICTIONARY_H
-#define _COM_ANDROID_INPUTMETHOD_LATIN_BINARYDICTIONARY_H
+#ifndef _COM_CHERT_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H
+#define _COM_CHERT_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H
 
 #include "jni.h"
 
 namespace latinime {
-int register_BinaryDictionary(JNIEnv *env);
+int register_ProximityInfo(JNIEnv *env);
 } // namespace latinime
-#endif // _COM_ANDROID_INPUTMETHOD_LATIN_BINARYDICTIONARY_H
+#endif // _COM_CHERT_INPUTMETHOD_KEYBOARD_PROXIMITYINFO_H

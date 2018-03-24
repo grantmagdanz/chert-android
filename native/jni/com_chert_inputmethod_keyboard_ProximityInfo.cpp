@@ -16,7 +16,7 @@
 
 #define LOG_TAG "LatinIME: jni: ProximityInfo"
 
-#include "com_android_inputmethod_keyboard_ProximityInfo.h"
+#include "com_chert_inputmethod_keyboard_ProximityInfo.h"
 
 #include "defines.h"
 #include "jni.h"
@@ -57,7 +57,7 @@ static const JNINativeMethod sMethods[] = {
 };
 
 int register_ProximityInfo(JNIEnv *env) {
-    const char *const kClassPathName = "com/android/inputmethod/keyboard/ProximityInfo";
+    const char *const kClassPathName = "com/chert/inputmethod/keyboard/ProximityInfo";
     return registerNativeMethods(env, kClassPathName, sMethods, NELEMS(sMethods));
 }
 } // namespace latinime
